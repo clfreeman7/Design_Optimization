@@ -8,13 +8,22 @@ This repository includes a [main script (Design_Optimization.m)](/Design_Optimiz
   * A_sweep (1x101 vector of ampltidue values 0:0.01:1)
   * D_inter (5x101 matrix of intramodular distortion values): row value: Platonic solids ordered by # faces, column value: corresponds to amplitude index
   
-and consists of three major sections:
+and consists of four major sections:
 1.  Intermodular Distortion v. Amplitude
 2.  Locomotion Cost v. Amplitude
 3.  Final Optimization Problem
 4.  Plots of Optimal Amplitude Sketches
 
-  
+The outputs are
+1. Optimal amplitudes
+2. Intermodular distortion v. amplitude plot
+3. Locomotion cost v. amplitude plot
+4. Objective function v. amplitude plots
+5. Optimal amplitude module sketch plots
+
+The locomotion cost is based on the inverse of the maximum "arm" length, which is shown in the picture below for reference:
+
+
 ![arm](/description/arm_fig.PNG)
 
 # Design Exploration
