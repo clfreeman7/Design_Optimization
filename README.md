@@ -7,11 +7,12 @@ This repository includes a [main script (Design_Optimization.m)](/Design_Optimiz
 * [distort_plot.mat](/distort_plan.m):  data file containing:
   * A_sweep (1x101 vector of ampltidue values 0:0.01:1)
   * D_inter (5x101 matrix of intramodular distortion values): row value: Platonic solids ordered by # faces, column value: corresponds to amplitude index
+  
 and consists of three major sections:
-* Intermodular Distortion v. Amplitude
-* Locomotion Cost v. Amplitude
-* Final Optimization Problem
-* Plots of Optimal Amplitude Sketches
+1.  Intermodular Distortion v. Amplitude
+2.  Locomotion Cost v. Amplitude
+3.  Final Optimization Problem
+4.  Plots of Optimal Amplitude Sketches
 
   
 ![arm](/description/arm_fig.PNG)
