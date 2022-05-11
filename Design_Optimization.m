@@ -57,12 +57,13 @@ D_inter(5,infeas_cutoff_icosa+1:end)=NaN;
 figure(1)
 hold on
 for j = 1:5
-    plot(A_sweep,D_inter(j,:))
+    plot(A_sweep,D_inter(j,:),'Linewidth',4)
 end
-xlabel('A')
-ylabel('Intermodular Distortion')
+xlabel('Module toplogy curve amplitude (A)')
+ylabel('Intermodular Distortion (\epsilon_{inter})')
 legend('Tetrahedron','Cube','Octahedron','Dodecahedron','Icosahedron')
-
+grid on; grid minor; 
+set(gca,'FontSize',36);
 %% Locomotion Cost v. Amplitude
 a = 2;      % edge length
 N = 500;    % number of data points
@@ -109,28 +110,32 @@ for j = 1:5     % for each Platonic solid
     % normalized locomotion cost
     locom_cost(j,:) = locom_cost_abs(j,:)/max(locom_cost_abs(j,:));
 end
+locom_cost(5,infeas_cutoff_icosa+1:end)=NaN;
 
 % plot the data
 figure(2)
 hold on
 for j = 1:5     % for each Platonic solid
-    plot(A_sweep,locom_cost(j,:))
+    plot(A_sweep,locom_cost(j,:),'Linewidth',4)
 end
-xlabel('A')
-ylabel('Locomotion Difficulty Score')
+grid on; grid minor;
+xlabel('Module toplogy curve amplitude (A)')
+ylabel('Locomotion Difficulty Score (D_{loco})')
 legend('Tetrahedron','Cube','Octahedron','Dodecahedron','Icosahedron')
-
+grid on; grid minor; 
+set(gca,'FontSize',36);
 %% Final Optimization Problem 
 
-w = 0.55; % weighting parameter
+w = 0.56; % weighting parameter
 
 % build plot
  figure(3)
- t=tiledlayout(1,5);
- xlabel(t,'Amplitude, A');
- ylabel(t, 'Objective Function');
+set(gcf,'DefaultAxesFontSize',36)
+set(gcf,'DefaultLineLineWidth',4)
+ t=tiledlayout(2,5);
+%  xlabel(t,'Amplitude, A');
+%  ylabel(t, 'Objective Function');
 fprintf('Optimal Amplitudes:\n')
- 
 for j = 1:5   % for each Platonic solid
     Names = {'Tetrahedron','Cube','Octahedron','Dodecahedron','Icosahedron'};
     nexttile
@@ -151,21 +156,22 @@ for j = 1:5   % for each Platonic solid
     A_opt(j) = A_sweep(obj_fun==min(obj_fun));
 
     % plot vertical line with optimal amplitude
-    xline(A_opt(j),'k',{"Optimal Amplitude ="+A_opt(j)})
+%     xline(A_opt(j),'--k',{"Optimal Amplitude ="+A_opt(j)},'Linewidth',2)
+    xline(A_opt(j),'--k','Linewidth',4)
 
     title(Names{j})
 
     % report results
     fprintf('%s:    %g \n',Names{j},A_opt(j))
 end
-
+title(t,'Optimal module topology curve amplitude for different base platonic solids','FontSize',44)
 % add legend
 lg = legend({'Intermodular Distortion','Locomotion Cost','Objective Function'},'Orientation','Horizontal');
 lg.Layout.Tile = 'North';
 
 %% Plot the optimal amplitude sketches:
-figure(4)
-t2 = tiledlayout(1,5);
+% figure(4)
+% t2 = tiledlayout(1,5);
 
 for j = 1:5     % for each Platonic solid
     % Define Platonic solid and characteristics
@@ -185,6 +191,7 @@ for j = 1:5     % for each Platonic solid
     nexttile
     plot(x_full,y_full)
     axis square
-    title(Names{j}+", A = "+A_opt(j))
+%     title(Names{j}+", A = "+A_opt(j))
+    title("A* = "+A_opt(j))
 end
 
