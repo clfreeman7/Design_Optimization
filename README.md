@@ -5,6 +5,11 @@ C. Freeman, M. Maynard, and V. Vikas, “Topology and Morphology Design of Spher
 
 The arXiv version can be accessed [here](https://arxiv.org/abs/2205.00544). 
 
+## Overview
+The objective of this repository is to use numerical optimization to deisgn soft modular reconfigurable robots (MSoRos) that are capable of both individual locomotion and reconfiguration of multiple robot modules into a sphere for future rolling locomotion. Due to the nature of transformations between planar and spherical topology, it is impossible to achieve this reconfiguration without distortion. The [main script (Design_Optimization.m)](/Design_Optimization.m) finds the optimal robot design (given a sinusoidal limb shape) to minimize this distortion, facilitating spherical reconfiguration. 
+
+## Details
+
 This repository includes a [main script (Design_Optimization.m)](/Design_Optimization.m) and it's accompanying functions and data. The script requires the following files:
 * [InverseOrtho.m](/InverseOrtho.m): applies the inverse orthographic projection to the input base sketch, thereby creating a spherical sketch in (lat,long) cooridnates
 * [EqAzimuthal.m](/EqAzimuthal.m): applies the equidistant azimuthal projection to the spherical sketch, thereby creating the planar  module sketch
@@ -31,5 +36,3 @@ The locomotion cost is based on the inverse of the maximum "arm" length, which i
 
 ![arm](/description/arm_fig.PNG)
 
-# Design Exploration
- Coming soon.
