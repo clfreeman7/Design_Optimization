@@ -19,8 +19,6 @@ This MSoRo can then be combined with 5 other modules to form a sphere.
 ![](Planar_To_Sphere.JPG)
 ![](Spherical_Configuration.JPG)
 
-The sequential design process can be summarized as follows:
-![](Algorithm.jpg)
 ## Details
 
 This repository includes a [main script (Design_Optimization.m)](/Design_Optimization.m) and it's accompanying functions and data. The script requires the following files:
@@ -43,6 +41,10 @@ The outputs are
 3. Locomotion cost v. amplitude plot
 4. Objective function v. amplitude plots
 5. Optimal amplitude module sketch plots
+
+The sequential design process can be summarized as follows:
+![](Algorithm.jpg)
+
 
 The locomotion cost is based on the inverse of the maximum "arm" length, which is shown in the picture below for reference:
 
