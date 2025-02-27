@@ -20,7 +20,7 @@ This MSoRo can then be combined with 5 other modules to form a sphere.
 ![](Spherical_Configuration.JPG)
 
 The sequential design process can be summarized as follows:
-![](Algorithm.png)
+![](Algorithm.JPG)
 ## Details
 
 This repository includes a [main script (Design_Optimization.m)](/Design_Optimization.m) and it's accompanying functions and data. The script requires the following files:
