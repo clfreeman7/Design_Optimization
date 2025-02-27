@@ -5,7 +5,7 @@ C. Freeman, M. Maynard, and V. Vikas, “Topology and Morphology Design of Spher
 
 The arXiv version can be accessed [here](https://arxiv.org/abs/2205.00544). 
 
-The accompanying youtube video describing this process can be found (here)[https://www.youtube.com/watch?v=K-ZRhlJ1r1A].
+The accompanying youtube video describing this process can be found [here](https://www.youtube.com/watch?v=K-ZRhlJ1r1A).
 
 
 ## Overview
