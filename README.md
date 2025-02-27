@@ -1,4 +1,9 @@
-# Design Optimization
+# Design_Optimization
+This repository inclued the MATLAB functions and analysis for the journal paper "Topology and Morphology Design of Spherically Reconfigurable Homogeneous Modular Soft Robots," as [published in Soft Robotics](https://www.liebertpub.com/doi/10.1089/soro.2021.0125). This paper can be cited as follows:
+
+C. Freeman, M. Maynard, and V. Vikas, “Topology and Morphology Design of Spherically Reconfigurable Homogeneous Modular Soft Robots,” Soft Robotics, vol. 10, Jul. 2022, doi: 10.1089/soro.2021.0125.
+
+The arXiv version can be accessed [here](https://arxiv.org/abs/2205.00544). 
 
 This repository includes a [main script (Design_Optimization.m)](/Design_Optimization.m) and it's accompanying functions and data. The script requires the following files:
 * [InverseOrtho.m](/InverseOrtho.m): applies the inverse orthographic projection to the input base sketch, thereby creating a spherical sketch in (lat,long) cooridnates
