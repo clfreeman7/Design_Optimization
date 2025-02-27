@@ -7,6 +7,7 @@ The arXiv version can be accessed [here](https://arxiv.org/abs/2205.00544).
 
 The accompanying youtube video describing this process can be found [here](https://www.youtube.com/watch?v=K-ZRhlJ1r1A).
 
+The related repository that details the fabrication and mechatronics of the robot can be accessed [here](https://github.com/clfreeman7/Fabrication).
 
 ## Overview
 The objective of this repository is to use numerical optimization to deisgn soft modular reconfigurable robots (MSoRos) that are capable of both individual locomotion and reconfiguration of multiple robot modules into a sphere for future rolling locomotion. Due to the nature of transformations between planar and spherical topology, it is impossible to achieve this reconfiguration without distortion. The [main script (Design_Optimization.m)](/Design_Optimization.m) finds the optimal robot design (given a sinusoidal limb shape) to minimize this distortion, facilitating spherical reconfiguration. This optimization process is performed for five different robot module types, based on the Platonic solids. 
