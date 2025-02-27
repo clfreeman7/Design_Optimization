@@ -12,6 +12,15 @@ The related repository that details the fabrication and mechatronics of the robo
 ## Overview
 The objective of this repository is to use numerical optimization to deisgn soft modular reconfigurable robots (MSoRos) that are capable of both individual locomotion and reconfiguration of multiple robot modules into a sphere for future rolling locomotion. Due to the nature of transformations between planar and spherical topology, it is impossible to achieve this reconfiguration without distortion. The [main script (Design_Optimization.m)](/Design_Optimization.m) finds the optimal robot design (given a sinusoidal limb shape) to minimize this distortion, facilitating spherical reconfiguration. This optimization process is performed for five different robot module types, based on the Platonic solids. 
 
+For example, an inidvidual MSoRo, as shown below, is designed based on the hexahedron (cube). 
+![Inidividual MSoRo module](MSoRo.png)
+
+This MSoRo can then be combined with 5 other modules to form a sphere. 
+![](Planar_To_Sphere.JPG)
+![](Spherical_Configuration.JPG)
+
+The sequential design process can be summarized as follows:
+![](Algorithm.pdf)
 ## Details
 
 This repository includes a [main script (Design_Optimization.m)](/Design_Optimization.m) and it's accompanying functions and data. The script requires the following files:
